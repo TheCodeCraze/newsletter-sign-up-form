@@ -1,0 +1,58 @@
+.card {
+  width: 928px;
+  height: 641px;
+  padding: 24px;
+  background: #fff;
+  display: flex;
+  gap: 64px;
+  border-radius: 36px;
+}
+
+.card-text {
+  width: 376px;
+  height: 446px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 73px 0 74px 40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  line-height: 100%;
+}
+
+.description {
+  font-weight: 400;
+  color: var(--dark-slate-grey);
+  line-height: 150%;
+}
+
+.points {
+  list-style-image: url("/icon-list.svg");
+  list-style-position: inside;
+  font-weight: 400;
+  color: var(--dark-slate-grey);
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.points li {
+  position: relative;
+}
+
+.points span {
+  position: absolute;
+  top: 0;
+  left: 37px;
+}
