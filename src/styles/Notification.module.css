@@ -1,2 +1,51 @@
 .card {
+  width: 504px;
+  height: 520px;
+  padding: 48px 64px 64px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 36px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+.title {
+  height: 112px;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  line-height: 100%;
+}
+
+.description {
+  height: 72px;
+  margin-top: -16px;
+  font-weight: 400;
+  color: var(--dark-slate-grey);
+  line-height: 150%;
+}
+
+.description > span {
+  font-weight: 700;
+}
+
+.button {
+  width: 100%;
+  height: 56px;
+  background: var(--dark-slate-grey);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 150%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
