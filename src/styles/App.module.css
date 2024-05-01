@@ -18,12 +18,15 @@
 }
 
 .info {
+  width: 100%;
+  height: 244px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .title {
+  height: 56px;
   font-size: 56px;
   font-weight: 700;
   color: var(--dark-slate-grey);
@@ -31,12 +34,14 @@
 }
 
 .description {
+  height: 48px;
   font-weight: 400;
   color: var(--dark-slate-grey);
   line-height: 150%;
 }
 
-.points {
+.list {
+  height: 92px;
   list-style-image: url("/icon-list.svg");
   list-style-position: inside;
   font-weight: 400;
@@ -47,12 +52,103 @@
   gap: 10px;
 }
 
-.points li {
+.list li {
+  height: 24px;
   position: relative;
 }
 
-.points span {
+.list span {
   position: absolute;
   top: 0;
   left: 37px;
+}
+
+.form {
+  width: 100%;
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.group {
+  width: 100%;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  line-height: 150%;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-slate-grey);
+  line-height: 150%;
+  padding: 16px 24px;
+  caret-color: var(--dark-slate-grey);
+  outline: none;
+  border: 1px solid hsla(243, 28%, 13%, 0.25);
+  border-radius: 8px;
+}
+
+.input::placeholder {
+  color: var(--dark-slate-grey);
+  opacity: 0.5;
+}
+
+.input:focus {
+  border: 1px solid var(--dark-slate-grey);
+  cursor: pointer;
+}
+
+.error {
+  background: hsla(4, 100%, 67%, 0.15);
+  color: var(--tomato);
+  border: 1px solid var(--tomato);
+}
+
+.error::placeholder {
+  color: var(--tomato);
+  opacity: 1;
+}
+
+.error-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tomato);
+  line-height: 150%;
+}
+
+.button {
+  width: 100%;
+  height: 56px;
+  background: var(--dark-slate-grey);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 150%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(82deg, #ff527b, #ff6a3a);
+  box-shadow: 0 16px 32px 0 hsla(4, 100%, 67%, 0.5);
 }

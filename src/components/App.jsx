@@ -1,6 +1,22 @@
+import { useState } from "react";
 import styles from "../styles/App.module.css";
 
 export const App = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+    setError(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    email && email.includes("@") ? setError(false) : setError(true);
+  };
+
+  const inputClassName = `${styles.input} ${error ? styles.error : null}`;
+
   return (
     <main className={styles.card}>
       <div className={styles["card-text"]}>
@@ -9,7 +25,7 @@ export const App = () => {
           <p className={styles.description}>
             Join 60,000+ product managers receiving monthly updates on:
           </p>
-          <ul className={styles.points}>
+          <ul className={styles.list}>
             <li>
               <span>Product discovery and building what matters</span>
             </li>
@@ -21,7 +37,25 @@ export const App = () => {
             </li>
           </ul>
         </div>
-        <form className={styles.form}></form>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.group}>
+            <label className={styles.label}>Email address</label>
+            <input
+              type="text"
+              name="email"
+              placeholder="email@company.com"
+              className={inputClassName}
+              value={email}
+              onChange={handleChange}
+            />
+            {error ? (
+              <p className={styles["error-message"]}>Valid email required</p>
+            ) : null}
+          </div>
+          <button className={styles.button}>
+            Subscribe to monthly newsletter
+          </button>
+        </form>
       </div>
       <img
         src="/illustration-sign-up-desktop.svg"
@@ -31,19 +65,3 @@ export const App = () => {
     </main>
   );
 };
-
-// Email address
-// email@company.com
-
-// Subscribe to monthly newsletter
-
-// <!-- Success message start -->
-
-// Thanks for subscribing!
-
-// A confirmation email has been sent to ash@loremcompany.com.
-// Please open it and click the button inside to confirm your subscription.
-
-// Dismiss message
-
-// <!-- Success message end -->
