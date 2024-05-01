@@ -27,3 +27,15 @@ body {
   display: grid;
   place-items: center;
 }
+
+@media screen and (max-width: 960px) {
+  body {
+    height: 842px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    display: block;
+  }
+}
